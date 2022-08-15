@@ -1,0 +1,34 @@
+{% extends "layouts/default.html" %}
+
+
+{% block body %}
+
+
+
+ <div class="login">
+	<h1>Prediction de fraude</h1>
+	<br>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for("predict")}}"method="post">
+    	<input type="number" name="type" placeholder="type" required="required" />
+    	<p>PAYEMENT = 0, TRANSFER = 1, CASH_OUT = 2, DEBIT = 3, CASH_IN = 4 </p><br>
+        <input type="number" name="amount" placeholder="amount" required="required" />
+		<input type="number" name="oldbalanceOrg" placeholder="oldbalanceOrg" required="required" />
+		<input type="number" name="newbalanceOrig" placeholder="newbalanceOrig" required="required" />
+		<input type="number" name="oldbalanceDest" placeholder="oldbalanceDest" required="required" />
+		<input type="number" name="newbalanceDest" placeholder="newbalanceDest" required="required" />
+		
+                 
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+ 
+{% endblock body %}
+

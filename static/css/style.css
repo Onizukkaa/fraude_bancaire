@@ -1,0 +1,25 @@
+/*init*\
+
+@font-face{
+
+    font-familly : eraserregular;
+    src:url("Eraser.ttf")
+    font-weight: bold;
+    }
+    
+h1{
+    font-family: eraserregular;
+    font-size : 34px;
+    color : #FFF;
+}
+
+/*main*\
+
+div#main{
+    width:1440px;
+    height:900px;
+    position:relative;
+    overflow:hidden;
+    background-color:rgba(0,0,0,1);
+}
+

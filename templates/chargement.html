@@ -1,0 +1,20 @@
+
+{% extends "layouts/default.html" %}
+
+{%  block body %}  
+    
+    <h1>Page de chargement des données</h1> 
+    <h2>Essayons de prédire</h2>
+    <br>
+    
+    <p> Choisissez votre ficher CSV et téléchargez les résultats</p> 
+    <br> 
+    
+    <form action="/transform" method="post" enctype="multipart/form-data"/>
+    <input type="file" name="fichier_csv" class="btn btn-block" />
+    <button type="submit" class="btn tbn-primary btn-block btn-large" >Predict</button>
+    </form>
+    
+    
+
+{% endblock body %}
